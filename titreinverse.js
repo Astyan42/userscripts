@@ -7,8 +7,8 @@
 // @match		http://thefactory.crossknowledge.com/10/*
 // @exclude    http://thefactory.crossknowledge.com/10/Incident/List.aspx*
 // @exclude 	http://thefactory.crossknowledge.com/14/Incident/List.aspx*
-// @updateURL  http://pink-floyd:81/userscript/titreinverse.js
-// @downloadURL  http://pink-floyd:81/userscript/titreinverse.js
+// @updateURL  https://github.com/Astyan42/userscripts/raw/master/titreinverse.js
+// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/titreinverse.js
 // @copyright  2012+, You
 // ==/UserScript==
 

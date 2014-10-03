@@ -7,8 +7,8 @@
 // @match		http://thefactory.crossknowledge.com/10/*
 // @exclude    http://thefactory.crossknowledge.com/10/Incident/List.aspx*
 // @exclude 	http://thefactory.crossknowledge.com/14/Incident/List.aspx*
-// @updateURL  http://pink-floyd:81/userscript/spiraCommentaire.js
-// @downloadURL  http://pink-floyd:81/userscript/spiraCommentaire.js
+// @updateURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
+// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
 // @copyright  2012+, You
 // ==/UserScript==
 
