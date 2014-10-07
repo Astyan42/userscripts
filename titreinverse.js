@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Mise [IN:] en debut de titre
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.1
+// @version    1.2
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match		http://thefactory.crossknowledge.com/10/*
@@ -12,7 +12,13 @@
 // @copyright  2012+, You
 // ==/UserScript==
 
-var title = document.getElementById("cplMainContent_lblIncidentTitle");
-var regexPattern = /\[IN:[0-9]*\]/i;
-var inValue = regexPattern.exec(title.innerHTML);
-title.innerHTML = inValue[0]+" "+title.innerHTML.replace(inValue[0],"");
+var title = document.getElementById('cplMainContent_lblIncidentTitle');
+
+var inValue = /\[(IN:[0-9]*)\]/i.exec(title.innerHTML);
+title.innerHTML = '<a href="http://prod.epistema.com/spira/?project=10&artifact=' + inValue[1] + '">' + inValue[0] + '</a> ' + title.innerHTML.replace(inValue[0], '');
+
+var rqValue = /\[(RQ:[0-9]*)\]/i.exec(title.innerHTML);
+if (rqValue != null)
+{
+ title.innerHTML = '<a href="http://prod.epistema.com/spira/?project=11&artifact=' + rqValue[1] + '">' + rqValue[0] + '</a>' + title.innerHTML.replace(rqValue[0], '');
+}
