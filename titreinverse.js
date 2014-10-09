@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name       Mise [IN:] en debut de titre
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.2
+// @version    1.3
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match		http://thefactory.crossknowledge.com/10/*
+// @match      https://thefactory.crossknowledge.com/14/*
+// @match		https://thefactory.crossknowledge.com/10/*
 // @exclude    http://thefactory.crossknowledge.com/10/Incident/List.aspx*
 // @exclude 	http://thefactory.crossknowledge.com/14/Incident/List.aspx*
 // @updateURL  https://github.com/Astyan42/userscripts/raw/master/titreinverse.js
