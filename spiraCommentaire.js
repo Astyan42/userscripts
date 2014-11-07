@@ -12,6 +12,7 @@
 // @updateURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
 // @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
 // @copyright  2012+, You
+// @grant		None
 // ==/UserScript==
 
 // Wait for the page to load before anything
