@@ -12,7 +12,7 @@
 // @updateURL  https://github.com/Astyan42/userscripts/raw/master/spiraOpenerOwner.js
 // @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraOpenerOwner.js
 // @copyright  2012+, You
-// @grant		None
+// @grant		none
 // ==/UserScript==
 
 
