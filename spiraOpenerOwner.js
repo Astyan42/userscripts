@@ -47,3 +47,4 @@ function createButton(dropDownId)
 
 createButton('cplMainContent_ddlOwner');
 createButton('cplMainContent_ddlOpener');
+createButton('cplMainContent_tblFields_Custom_01');
