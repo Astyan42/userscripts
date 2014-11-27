@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Spira Opener & Owner
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.1
+// @version    1.2
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match       http://thefactory.crossknowledge.com/10/*
