@@ -35,7 +35,7 @@ function createButton(dropDownId)
 {
     var referenceNode = document.querySelector("#" + dropDownId);
     
-    // Create QA-Team button
+    // Create QA-Team and a PHP-Team button
     if (dropDownId == 'cplMainContent_ddlOwner') {
         var qaButton = document.createElement("button");
         qaButton.innerHTML = "QA-Team";
@@ -43,6 +43,14 @@ function createButton(dropDownId)
         
         qaButton.onclick = function() {
             return buttonOnCLick(dropDownId, "QA- Team");
+        }
+
+        var phpButton = document.createElement("button");
+        phpButton.innerHTML = "PHP-Team";
+        referenceNode.parentNode.insertBefore(phpButton, referenceNode.nextSibling);
+        
+        phpButton.onclick = function() {
+            return buttonOnCLick(dropDownId, "PHP- Team");
         }
     }
 
