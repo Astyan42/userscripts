@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Spira Opener & Owner
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.1
+// @version    1.2
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match       http://thefactory.crossknowledge.com/10/*
@@ -35,22 +35,22 @@ function createButton(dropDownId)
 {
     var referenceNode = document.querySelector("#" + dropDownId);
     
-    // Create QA-Team and a PHP-Team button
+    // Create QA Team and a PHP Team button
     if (dropDownId == 'cplMainContent_ddlOwner') {
         var qaButton = document.createElement("button");
-        qaButton.innerHTML = "QA-Team";
+        qaButton.innerHTML = "QA Team";
         referenceNode.parentNode.insertBefore(qaButton, referenceNode.nextSibling);
         
         qaButton.onclick = function() {
-            return buttonOnCLick(dropDownId, "QA- Team");
+            return buttonOnCLick(dropDownId, "QA Team");
         }
 
         var phpButton = document.createElement("button");
-        phpButton.innerHTML = "PHP-Team";
+        phpButton.innerHTML = "PHP Team";
         referenceNode.parentNode.insertBefore(phpButton, referenceNode.nextSibling);
         
         phpButton.onclick = function() {
-            return buttonOnCLick(dropDownId, "PHP- Team");
+            return buttonOnCLick(dropDownId, "PHP Team");
         }
     }
 
