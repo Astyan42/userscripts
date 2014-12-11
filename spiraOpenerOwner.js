@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Spira Opener & Owner
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.2
+// @version    1.3
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match       http://thefactory.crossknowledge.com/10/*
@@ -45,12 +45,19 @@ function createButton(dropDownId)
             return buttonOnCLick(dropDownId, "QA Team");
         }
 
-        var phpButton = document.createElement("button");
-        phpButton.innerHTML = "PHP Team";
-        referenceNode.parentNode.insertBefore(phpButton, referenceNode.nextSibling);
+        var teamButton = document.createElement("button");
+        var teamButtonLabel = "";
+        if(document.URL.match(/http(s)?:\/\/thefactory.crossknowledge\.com\/10\/*/)){
+            teamButtonLabel = "NET Team";
+        }
+        else{
+            teamButtonLabel = "PHP Team";
+        }
+        teamButton.innerHTML = teamButtonLabel;
+        referenceNode.parentNode.insertBefore(teamButton, referenceNode.nextSibling);
         
-        phpButton.onclick = function() {
-            return buttonOnCLick(dropDownId, "PHP Team");
+        teamButton.onclick = function() {
+            return buttonOnCLick(dropDownId, teamButtonLabel);
         }
     }
 
@@ -67,4 +74,4 @@ function createButton(dropDownId)
 
 createButton('cplMainContent_ddlOwner');
 createButton('cplMainContent_ddlOpener');
-createButton('cplMainContent_tblFields_Custom_01');
+createButton('cplMainContent_tblFields_Custom_05');
