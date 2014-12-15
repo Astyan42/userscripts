@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Spira Commentaire
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.6
+// @version    1.7
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match		http://thefactory.crossknowledge.com/10/*
