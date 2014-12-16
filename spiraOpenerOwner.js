@@ -75,3 +75,4 @@ function createButton(dropDownId)
 createButton('cplMainContent_ddlOwner');
 createButton('cplMainContent_ddlOpener');
 createButton('cplMainContent_tblFields_Custom_05');
+createButton('cplMainContent_tblFields_Custom_02');
