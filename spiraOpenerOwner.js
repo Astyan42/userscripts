@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Spira Opener & Owner
 // @namespace  http://use.i.E.your.homepage/
-// @version    1.3
+// @version    1.4
 // @description  enter something useful
 // @match      http://thefactory.crossknowledge.com/14/*
 // @match       http://thefactory.crossknowledge.com/10/*
@@ -74,5 +74,6 @@ function createButton(dropDownId)
 
 createButton('cplMainContent_ddlOwner');
 createButton('cplMainContent_ddlOpener');
+createButton('cplMainContent_tblFields_Custom_01');
 createButton('cplMainContent_tblFields_Custom_05');
 createButton('cplMainContent_tblFields_Custom_02');
