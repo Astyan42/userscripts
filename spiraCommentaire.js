@@ -7,8 +7,8 @@
 // @match        https://thefactory.crossknowledge.com/*/Incident/*
 // @exclude      http://thefactory.crossknowledge.com/*/Incident/List.aspx*
 // @exclude      https://thefactory.crossknowledge.com/*/Incident/List.aspx*
-// @updateURL    https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
-// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
+// @updateURL    https://github.com/fchastanet/TamperMonkeyCrossknowledgeSpira/blob/master/spiraComment.js
+// @downloadURL  https://github.com/fchastanet/TamperMonkeyCrossknowledgeSpira/blob/master/spiraComment.js
 // @copyright    2012+, You
 // @grant        none
 // ==/UserScript==
@@ -18,14 +18,9 @@ document.onreadystatechange = function ()
 {
 	if (document.readyState == "complete") 
 	{
-		var tdButton = document.createElement("td");
 		var button = document.createElement("button");
-		button.innerHTML = 'Pré-remplir';
-		tdButton.setAttribute("width","70px");
-		tdButton.appendChild(button);
-		button.setAttribute(
-			"onclick",
-			"var templateCommentaire = '<ul><li> <b>Corrigé</b></li><li> <b>Problème :</b> <i> obligatoire, détailler...</i> </li><li> <b>Solution :</b> <i>obligatoire, détailler...</i></li><li> <b>Tests :</b> <i>obligatoire, détailler...</i></li><li> <b>Impacts potentiels :</b> <i>obligatoire, détailler...</i> </li><li> <b>@QA (Non Reg.) :</b> <i>obligatoire, détailler...</i></li><li> <b>@Support :</b> <i>optionnel</i></li><li> <b>Origine :</b> <i>optionnel cause de la régression</i> (pour la maintenance)</li></ul>';	document.querySelector('#cplMainContent_pnlOverview_Comments .rteDiv').innerHTML = templateCommentaire;return false;");
-		document.querySelector("#cplMainContent_pnlOverview_Comments .rteBack tr").appendChild(tdButton);
+		button.innerHTML = 'préremplir';
+		button.setAttribute("onclick","var templateCommentaire = '<ul><li> <b>Corrected</b></li><li> <b>Problem :</b> <i> mandatory, describe...</i> </li><li> <b>Solution :</b> <i>mandatory, describe...</i></li><li> <b>Tests :</b> <i>mandatory, describe...</i></li><li> <b>Potential Impacts :</b> <i>mandatory, describe...</i> </li><li> <b>@QA (Non Reg.) :</b> <i>mandatory, describe...</i></li><li> <b>Origin :</b> <i>optionnal, regression cause, requirement, ...</i> (for maintenance)</li></ul>';	document.getElementById('cke_3_contents').querySelector('iframe').contentWindow.document.querySelector('body').innerHTML = templateCommentaire;document.getElementById('cke_2_contents').style.height = '200px'; return false;");
+		document.querySelector("#cplMainContent_btnNewComment").parentNode.appendChild(button);
 	}
 };
