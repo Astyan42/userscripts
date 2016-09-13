@@ -22,5 +22,6 @@ document.onreadystatechange = function ()
 		button.innerHTML = 'préremplir';
 		button.setAttribute("onclick","var templateCommentaire = '<ul><li> <b>Corrected</b></li><li> <b>Problem :</b> <i> mandatory, describe...</i> </li><li> <b>Solution :</b> <i>mandatory, describe...</i></li><li> <b>Tests :</b> <i>mandatory, describe...</i></li><li> <b>Potential Impacts :</b> <i>mandatory, describe...</i> </li><li> <b>@QA (Non Reg.) :</b> <i>mandatory, describe...</i></li><li> <b>Origin :</b> <i>optionnal, regression cause, requirement, ...</i> (for maintenance)</li></ul>';	document.getElementById('cke_3_contents').querySelector('iframe').contentWindow.document.querySelector('body').innerHTML = templateCommentaire;document.getElementById('cke_2_contents').style.height = '200px'; return false;");
 		document.querySelector("#cplMainContent_btnNewComment").parentNode.appendChild(button);
+		document.querySelector("#cke_3_contents").style.height="170px";
 	}
 };
