@@ -7,8 +7,8 @@
 // @match        https://thefactory.crossknowledge.com/*/Incident/*
 // @exclude      http://thefactory.crossknowledge.com/*/Incident/List.aspx*
 // @exclude      https://thefactory.crossknowledge.com/*/Incident/List.aspx*
-// @updateURL    https://github.com/fchastanet/TamperMonkeyCrossknowledgeSpira/blob/master/spiraOpenerOwner.js
-// @downloadURL  https://github.com/fchastanet/TamperMonkeyCrossknowledgeSpira/blob/master/spiraOpenerOwner.js
+// @updateURL    https://github.com/Astyan42/userscripts/raw/master/spiraOpenerOwner.js
+// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraOpenerOwner.js
 // @copyright    2012+, You
 // @grant        none
 // ==/UserScript==
