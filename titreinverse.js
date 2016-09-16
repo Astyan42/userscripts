@@ -1,25 +1,31 @@
 // ==UserScript==
-// @name         Mise [IN:] en debut de titre
-// @namespace    http://use.i.E.your.homepage/
-// @version      1.4
-// @description  enter something useful
-// @match        http://thefactory.crossknowledge.com/*/Incident/*
-// @match        https://thefactory.crossknowledge.com/*/Incident/*
-// @exclude      http://thefactory.crossknowledge.com/*/Incident/List.aspx*
-// @exclude      https://thefactory.crossknowledge.com/*/Incident/List.aspx*
-// @updateURL    https://github.com/Astyan42/userscripts/raw/master/titreinverse.js
-// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/titreinverse.js
-// @copyright    2012+, You
+// @name       Put [IN:] or [RQ:] at the beginning of the title.
+// @namespace  http://use.i.E.your.homepage/
+// @version    1.5
+// @description  Adds [IN:xxxxx] or [RQ:xxxxx] at the beginning of the title. It is usefull if you want to copy-paste the title when you commit something because it is required by the hook.
+// @match      http://thefactory.crossknowledge.com/14/*
+// @match		http://thefactory.crossknowledge.com/10/*
+// @match      https://thefactory.crossknowledge.com/14/*
+// @match		https://thefactory.crossknowledge.com/10/*
+// @exclude    http://thefactory.crossknowledge.com/10/Incident/List.aspx*
+// @exclude 	http://thefactory.crossknowledge.com/14/Incident/List.aspx*
+// @copyright  2012+, You
 // ==/UserScript==
 
-var project = /^\/(\d+)\//.exec(document.location.pathname)[1];
-var title = document.getElementById('cplMainContent_lblIncidentTitle');
+// Wait for the page to load before anything
+$(window).load(function() {
 
-var inValue = /\[(IN:[0-9]*)\]/i.exec(title.innerHTML);
-title.innerHTML = '<a href="http://prod.epistema.com/spira/?project='+project+'&artifact=' + inValue[1] + '">' + inValue[0] + '</a> ' + title.innerHTML.replace(inValue[0], '');
+    var inValue = document.getElementById("cplMainContent_lblIncidentId");
+    if (inValue) {
+        inValue = inValue.innerHTML;
+        var incidentTitle = document.getElementById("cplMainContent_lblIncidentTitle");
+        incidentTitle.innerHTML = inValue + " " + incidentTitle.innerHTML;
+    }
 
-var rqValue = /\[(RQ:[0-9]*)\]/i.exec(title.innerHTML);
-if (rqValue != null)
-{
- title.innerHTML = '<a href="http://prod.epistema.com/spira/?project='+project+'&artifact=' + rqValue[1] + '">' + rqValue[0] + '</a>' + title.innerHTML.replace(rqValue[0], '');
-}
+    var rqValue = document.getElementById("cplMainContent_lblRequirementId");
+    if (rqValue) {
+        rqValue = rqValue.innerHTML;
+        var rqTitle = document.getElementById("cplMainContent_lblRequirementName");
+        rqTitle.innerHTML = "[" + rqValue + "] " + rqTitle.innerHTML;
+    }
+});
