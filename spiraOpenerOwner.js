@@ -9,8 +9,8 @@
 // @match		https://thefactory.crossknowledge.com/10/*
 // @exclude    http://thefactory.crossknowledge.com/10/Incident/List.aspx*
 // @exclude 	http://thefactory.crossknowledge.com/14/Incident/List.aspx*
-// @updateURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
-// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraCommentaire.js
+// @updateURL  https://github.com/Astyan42/userscripts/raw/master/spiraOpenerOwner.js
+// @downloadURL  https://github.com/Astyan42/userscripts/raw/master/spiraOpenerOwner.js
 // @copyright  2012+, You
 // @grant		none
 // ==/UserScript==
